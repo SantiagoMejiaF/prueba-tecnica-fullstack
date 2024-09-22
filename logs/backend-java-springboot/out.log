@@ -1,0 +1,54 @@
+20240922T181819,052 I o.h.v.i.u.Version [background-preinit] sessionId= transactionId= user= message=HV000001: Hibernate Validator 8.0.1.Final
+20240922T181819,099 I c.l.BackendJavaSpringboot [main] sessionId= transactionId= user= message=Starting BackendJavaSpringboot using Java 22.0.2 with PID 82444 (C:\Users\User\Documents\PruebaTecnica-LiteThinking\backend-java-springboot\target\classes started by User in C:\Users\User\Documents\PruebaTecnica-LiteThinking\backend-java-springboot)
+20240922T181819,101 I c.l.BackendJavaSpringboot [main] sessionId= transactionId= user= message=No active profile set, falling back to 1 default profile: "default"
+20240922T181820,221 I o.s.d.r.c.RepositoryConfigurationDelegate [main] sessionId= transactionId= user= message=Multiple Spring Data modules found, entering strict repository configuration mode
+20240922T181820,223 I o.s.d.r.c.RepositoryConfigurationDelegate [main] sessionId= transactionId= user= message=Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20240922T181820,398 I o.s.d.r.c.RepositoryConfigurationDelegate [main] sessionId= transactionId= user= message=Finished Spring Data repository scanning in 164 ms. Found 6 JPA repository interfaces.
+20240922T181820,420 I o.s.d.r.c.RepositoryConfigurationDelegate [main] sessionId= transactionId= user= message=Multiple Spring Data modules found, entering strict repository configuration mode
+20240922T181820,421 I o.s.d.r.c.RepositoryConfigurationDelegate [main] sessionId= transactionId= user= message=Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+20240922T181820,440 I o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] sessionId= transactionId= user= message=Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.litethinking.infrastructure.adapters.out.database.repository.CategoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+20240922T181820,440 I o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] sessionId= transactionId= user= message=Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.litethinking.infrastructure.adapters.out.database.repository.CompanyRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+20240922T181820,441 I o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] sessionId= transactionId= user= message=Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.litethinking.infrastructure.adapters.out.database.repository.CustomerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+20240922T181820,441 I o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] sessionId= transactionId= user= message=Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.litethinking.infrastructure.adapters.out.database.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+20240922T181820,441 I o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] sessionId= transactionId= user= message=Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.litethinking.infrastructure.adapters.out.database.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+20240922T181820,441 I o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] sessionId= transactionId= user= message=Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.litethinking.infrastructure.adapters.out.database.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+20240922T181820,441 I o.s.d.r.c.RepositoryConfigurationDelegate [main] sessionId= transactionId= user= message=Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+20240922T181820,985 I o.s.b.w.e.t.TomcatWebServer [main] sessionId= transactionId= user= message=Tomcat initialized with port 8080 (http)
+20240922T181820,997 I o.a.c.h.Http11NioProtocol [main] sessionId= transactionId= user= message=Initializing ProtocolHandler ["http-nio-8080"]
+20240922T181821,001 I o.a.c.c.StandardService [main] sessionId= transactionId= user= message=Starting service [Tomcat]
+20240922T181821,001 I o.a.c.c.StandardEngine [main] sessionId= transactionId= user= message=Starting Servlet engine: [Apache Tomcat/10.1.30]
+20240922T181821,056 I o.a.c.c.C.[.[.[/api/v1] [main] sessionId= transactionId= user= message=Initializing Spring embedded WebApplicationContext
+20240922T181821,056 I o.s.b.w.s.c.ServletWebServerApplicationContext [main] sessionId= transactionId= user= message=Root WebApplicationContext: initialization completed in 1905 ms
+20240922T181821,222 I o.h.j.i.u.LogHelper [main] sessionId= transactionId= user= message=HHH000204: Processing PersistenceUnitInfo [name: default]
+20240922T181821,298 I o.h.Version [main] sessionId= transactionId= user= message=HHH000412: Hibernate ORM core version 6.5.3.Final
+20240922T181821,330 I o.h.c.i.RegionFactoryInitiator [main] sessionId= transactionId= user= message=HHH000026: Second-level cache disabled
+20240922T181821,622 I o.s.o.j.p.SpringPersistenceUnitInfo [main] sessionId= transactionId= user= message=No LoadTimeWeaver setup: ignoring JPA class transformer
+20240922T181821,660 I c.z.h.HikariDataSource [main] sessionId= transactionId= user= message=HikariPool-1 - Starting...
+20240922T181821,817 I c.z.h.p.HikariPool [main] sessionId= transactionId= user= message=HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6821c63c
+20240922T181821,818 I c.z.h.HikariDataSource [main] sessionId= transactionId= user= message=HikariPool-1 - Start completed.
+20240922T181821,860 W o.h.o.deprecation [main] sessionId= transactionId= user= message=HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+20240922T181822,939 I o.h.e.t.j.p.i.JtaPlatformInitiator [main] sessionId= transactionId= user= message=HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+20240922T181823,097 I o.s.o.j.LocalContainerEntityManagerFactoryBean [main] sessionId= transactionId= user= message=Initialized JPA EntityManagerFactory for persistence unit 'default'
+20240922T181823,385 W o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [main] sessionId= transactionId= user= message=Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'companyUseCaseImpl' defined in file [C:\Users\User\Documents\PruebaTecnica-LiteThinking\backend-java-springboot\target\classes\com\litethinking\application\usecases\CompanyUseCaseImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'companyAdapter' defined in file [C:\Users\User\Documents\PruebaTecnica-LiteThinking\backend-java-springboot\target\classes\com\litethinking\infrastructure\adapters\out\database\CompanyAdapter.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'com.litethinking.infrastructure.adapters.out.database.mappers.CompanyOutMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+20240922T181823,385 I o.s.o.j.LocalContainerEntityManagerFactoryBean [main] sessionId= transactionId= user= message=Closing JPA EntityManagerFactory for persistence unit 'default'
+20240922T181823,387 I c.z.h.HikariDataSource [main] sessionId= transactionId= user= message=HikariPool-1 - Shutdown initiated...
+20240922T181823,389 I c.z.h.HikariDataSource [main] sessionId= transactionId= user= message=HikariPool-1 - Shutdown completed.
+20240922T181823,393 I o.a.c.c.StandardService [main] sessionId= transactionId= user= message=Stopping service [Tomcat]
+20240922T181823,405 I o.s.b.a.l.ConditionEvaluationReportLogger [main] sessionId= transactionId= user= message=
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+20240922T181823,425 E o.s.b.d.LoggingFailureAnalysisReporter [main] sessionId= transactionId= user= message=
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in com.litethinking.infrastructure.adapters.out.database.CompanyAdapter required a bean of type 'com.litethinking.infrastructure.adapters.out.database.mappers.CompanyOutMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.litethinking.infrastructure.adapters.out.database.mappers.CompanyOutMapper' in your configuration.
+
