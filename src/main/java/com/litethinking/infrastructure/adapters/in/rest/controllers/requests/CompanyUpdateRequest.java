@@ -1,20 +1,15 @@
 package com.litethinking.infrastructure.adapters.in.rest.controllers.requests;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import jakarta.validation.constraints.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class CompanyRequest {
-
-    @Schema(description = "Número de identificación tributaria (NIT) de la empresa. Debe tener exactamente 10 caracteres."
-    ,example = "1000286139")
-    @NotBlank(message = "El NIT es obligatorio.")
-    @Size(min = 10, max = 10, message = "El NIT debe tener exactamente 10 caracteres.")
-    @Pattern(regexp = "^\\d{10}$", message = "El NIT debe contener exactamente 10 dígitos numéricos.")
-    private String nit;
+public class CompanyUpdateRequest {
 
     @Schema(description = "Nombre de la empresa.", example = "Litethinking S.A.S.")
     @NotBlank(message = "El nombre de la empresa es obligatorio.")

@@ -27,12 +27,12 @@ public class CompanyAdapter implements CompanyPort {
 
     @Override
     public Optional<Company> findByNit(String nit) {
-        return companyRepository.findByNit(nit).map(companyOutMapper::toDomain);
+        return companyRepository.findById(nit).map(companyOutMapper::toDomain);
     }
 
     @Override
     public void deleteByNit(String nit) {
-        companyRepository.deleteByNit(nit);
+        companyRepository.deleteById(nit);
     }
 
     @Override

@@ -4,10 +4,14 @@ import com.litethinking.domain.Customer;
 import com.litethinking.infrastructure.adapters.out.database.entities.CustomerEntity;
 import org.mapstruct.Mapper;
 
+import java.util.List;
+
 @Mapper(componentModel = "spring")
-public interface CustomerMapper {
+public interface CustomerOutMapper {
 
-    Customer toDomain (CustomerEntity customerEntity);
+    Customer toDomain(CustomerEntity customerEntity);
 
-    CustomerEntity toEntity (Customer customer);
+    CustomerEntity toEntity(Customer customer);
+
+    List<Customer> toDomains(List<CustomerEntity> customerEntities);
 }

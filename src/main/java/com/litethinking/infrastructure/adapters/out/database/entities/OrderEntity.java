@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.Comment;
 
-import java.util.Set;
+import java.util.List;
 
 @Entity
 @Getter
@@ -23,7 +23,7 @@ public class OrderEntity {
     @ManyToOne
     @JoinColumn(name = "CLIENTE_ID", nullable = false)
     @Comment("Cliente que realizó la orden")
-    private CustomerEntity customerEntity;
+    private CustomerEntity customer;
 
     @ManyToMany
     @JoinTable(
@@ -32,7 +32,7 @@ public class OrderEntity {
             inverseJoinColumns = @JoinColumn(name = "PRODUCTO_ID")
     )
     @Comment("Productos en la orden")
-    private Set<ProductEntity> productEntities;
+    private List<ProductEntity> products;
 
     @Column(name = "TOTAL", nullable = false)
     @Comment("Total de la orden")

@@ -5,7 +5,7 @@ import com.litethinking.infrastructure.adapters.out.database.entities.UserEntity
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
-public interface UserMapper {
+public interface UserOutMapper {
 
     User toDomain (UserEntity userEntity);
 

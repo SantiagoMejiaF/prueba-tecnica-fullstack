@@ -1,7 +1,7 @@
 server:
   port: 8080
   servlet:
-    context-path: /api/v1
+    context-path: /api/v1/backend-java-springboot
 
 spring-doc:
   swagger-ui:
@@ -18,7 +18,7 @@ spring:
     name: backend-java-springboot
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/prueba-tecnica-bd
+    url: jdbc:postgresql://localhost:5432/PruebaTecnicaBD
     username: postgres
     password: fcHRH2TPJTPKmbd3
     driver-class-name: org.postgresql.Driver
@@ -40,6 +40,10 @@ spring:
 request-mapping:
   controller:
     company: companies
+    product: products
+    order: orders
+    customer: customers
+
 
 log4j:
   configurationFile: log4j2-spring.xml, log4j2-env.xml

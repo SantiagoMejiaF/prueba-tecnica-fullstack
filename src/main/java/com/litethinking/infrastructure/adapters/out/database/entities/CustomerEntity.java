@@ -5,8 +5,6 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.Comment;
 
-import java.util.Set;
-
 @Entity
 @Getter
 @Setter
@@ -27,8 +25,4 @@ public class CustomerEntity {
     @Column(name = "CORREO", length = 100, nullable = false)
     @Comment("Correo electrónico del cliente")
     private String email;
-
-    @OneToMany(mappedBy = "customerEntity", cascade = CascadeType.ALL)
-    @Comment("Órdenes asociadas al cliente")
-    private Set<OrderEntity> orderEntities;
 }

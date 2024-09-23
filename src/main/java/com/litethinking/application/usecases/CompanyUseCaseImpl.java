@@ -31,7 +31,7 @@ public class CompanyUseCaseImpl implements CompanyUseCase {
     }
 
     @Override
-    public void deleteCompany(String nit) {
+    public void deleteCompanyByNit(String nit) {
         companyPort.deleteByNit(nit);
     }
 

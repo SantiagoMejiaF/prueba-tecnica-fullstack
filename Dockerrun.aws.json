@@ -1,0 +1,22 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "openjdk:17-jdk-alpine"
+  },
+  "Ports": [
+    {
+      "ContainerPort": "8080"
+    }
+  ],
+  "Volumes": [
+    {
+      "HostDirectory": "/app",
+      "ContainerDirectory": "/app"
+    }
+    ],
+  "Command": [
+      "java",
+      "-jar",
+      "/app/demo-0.0.1-SNAPSHOT.jar"
+    ]
+}

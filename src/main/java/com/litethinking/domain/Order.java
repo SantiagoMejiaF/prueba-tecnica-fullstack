@@ -1,7 +1,8 @@
 package com.litethinking.domain;
 
 import lombok.*;
-import java.util.Set;
+
+import java.util.List;
 
 @Getter
 @Setter
@@ -13,7 +14,7 @@ public class Order {
 
     private Customer customer;
 
-    private Set<Product> products;
+    private List<Product> products;
 
     private Double total;
 }

@@ -4,8 +4,10 @@ import com.litethinking.domain.Company;
 import com.litethinking.infrastructure.adapters.in.rest.config.CompanyAPI;
 import com.litethinking.infrastructure.adapters.in.rest.controllers.mappers.CompanyMapper;
 import com.litethinking.infrastructure.adapters.in.rest.controllers.requests.CompanyRequest;
+import com.litethinking.infrastructure.adapters.in.rest.controllers.requests.CompanyUpdateRequest;
 import com.litethinking.infrastructure.adapters.in.rest.controllers.responses.CompanyResponse;
 import com.litethinking.infrastructure.ports.in.CompanyUseCase;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
+
 
 @AllArgsConstructor
 @RestController
@@ -32,8 +34,8 @@ public class CompanyController implements CompanyAPI {
     }
 
     @Override
-    public ResponseEntity<CompanyResponse> updateCompany(String nit, CompanyRequest companyRequest) {
-        Company company = companyMapper.toDomain(companyRequest);
+    public ResponseEntity<CompanyResponse> updateCompany(String nit, @Valid CompanyUpdateRequest companyUpdateRequest) {
+        Company company = companyMapper.requestToDomain(companyUpdateRequest);
         Optional<Company> updatedCompany = companyServiceUseCase.updateCompany(nit, company);
         return updatedCompany.map(c -> ResponseEntity.ok(companyMapper.toResponse(c)))
                 .orElse(ResponseEntity.notFound().build());
@@ -41,12 +43,12 @@ public class CompanyController implements CompanyAPI {
 
     @Override
     public ResponseEntity<Void> deleteCompany(String nit) {
-        companyServiceUseCase.deleteCompany(nit);
+        companyServiceUseCase.deleteCompanyByNit(nit);
         return ResponseEntity.noContent().build();
     }
 
     @Override
-    public ResponseEntity<CompanyResponse> getCompany(String nit) {
+    public ResponseEntity<CompanyResponse> getCompanyByNit(String nit) {
         Optional<Company> company = companyServiceUseCase.getCompanyByNit(nit);
         return company.map(c -> ResponseEntity.ok(companyMapper.toResponse(c)))
                 .orElse(ResponseEntity.notFound().build());
@@ -57,7 +59,7 @@ public class CompanyController implements CompanyAPI {
         List<Company> companies = companyServiceUseCase.getAllCompanies();
         List<CompanyResponse> companyResponses = companies.stream()
                 .map(companyMapper::toResponse)
-                .collect(Collectors.toList());
+                .toList();
         return ResponseEntity.ok(companyResponses);
     }
 }

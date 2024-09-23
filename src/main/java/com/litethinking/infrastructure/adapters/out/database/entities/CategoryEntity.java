@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.Comment;
 
-import java.util.Set;
 
 @Entity
 @Getter
@@ -23,8 +22,4 @@ public class CategoryEntity {
     @Column(name = "NOMBRE", length = 50, nullable = false)
     @Comment("Nombre de la categoría")
     private String name;
-
-    @ManyToMany(mappedBy = "categories")
-    @Comment("Productos asociados a esta categoría")
-    private Set<ProductEntity> productEntities;
 }

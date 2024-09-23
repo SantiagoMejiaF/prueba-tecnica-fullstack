@@ -5,17 +5,16 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.Comment;
 
-import java.util.Set;
+import java.util.List;
+
 
 @Entity
 @Getter
 @Setter
-@SequenceGenerator(name = "PRODUCT_SEQ", sequenceName = "SEQ_PRODUCT", allocationSize = 1)
 @Table(name = "PRODUCTO")
 public class ProductEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "PRODUCT_SEQ")
     @Column(name = "CODIGO", nullable = false)
     @Comment("Código único del producto")
     private Long code;
@@ -35,7 +34,7 @@ public class ProductEntity {
     @ManyToOne
     @JoinColumn(name = "NIT_EMPRESA", nullable = false)
     @Comment("Empresa que vende el producto")
-    private CompanyEntity companyEntity;
+    private CompanyEntity company;
 
     @ManyToMany
     @JoinTable(
@@ -44,5 +43,5 @@ public class ProductEntity {
             inverseJoinColumns = @JoinColumn(name = "CATEGORIA_ID")
     )
     @Comment("Categorías del producto")
-    private Set<CategoryEntity> categories;
+    private List<CategoryEntity> categories;
 }

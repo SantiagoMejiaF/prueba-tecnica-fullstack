@@ -1,7 +1,6 @@
 package com.litethinking.domain;
 
 import lombok.*;
-import java.util.Set;
 
 @Getter
 @Setter
@@ -16,6 +15,4 @@ public class Company {
     private String address;
 
     private String phone;
-
-    private Set<Product> products;
 }

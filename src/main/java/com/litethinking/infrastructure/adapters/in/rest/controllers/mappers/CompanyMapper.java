@@ -2,6 +2,7 @@ package com.litethinking.infrastructure.adapters.in.rest.controllers.mappers;
 
 import com.litethinking.domain.Company;
 import com.litethinking.infrastructure.adapters.in.rest.controllers.requests.CompanyRequest;
+import com.litethinking.infrastructure.adapters.in.rest.controllers.requests.CompanyUpdateRequest;
 import com.litethinking.infrastructure.adapters.in.rest.controllers.responses.CompanyResponse;
 import org.mapstruct.Mapper;
 
@@ -9,6 +10,8 @@ import org.mapstruct.Mapper;
 public interface CompanyMapper {
 
     Company toDomain(CompanyRequest companyRequest);
+
+    Company requestToDomain(CompanyUpdateRequest companyUpdateRequest);
 
     CompanyRequest toRequest(Company company);
 

@@ -15,5 +15,5 @@ public interface CompanyUseCase {
 
     Optional<Company> updateCompany(String nit, Company company);
 
-    void deleteCompany(String nit);
+    void deleteCompanyByNit(String nit);
 }

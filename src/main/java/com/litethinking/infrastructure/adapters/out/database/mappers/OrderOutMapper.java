@@ -4,10 +4,14 @@ import com.litethinking.domain.Order;
 import com.litethinking.infrastructure.adapters.out.database.entities.OrderEntity;
 import org.mapstruct.Mapper;
 
+import java.util.List;
+
 @Mapper(componentModel = "spring")
-public interface OrderMapper {
+public interface OrderOutMapper {
 
-    Order toDomain (OrderEntity orderEntity);
+    Order toDomain(OrderEntity orderEntity);
 
-    OrderEntity toEntity (Order order);
+    List<Order> toDomains(List<OrderEntity> orderEntities);
+
+    OrderEntity toEntity(Order order);
 }

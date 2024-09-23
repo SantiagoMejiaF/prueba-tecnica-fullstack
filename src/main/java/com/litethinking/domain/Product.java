@@ -1,7 +1,8 @@
 package com.litethinking.domain;
 
 import lombok.*;
-import java.util.Set;
+
+import java.util.List;
 
 @Getter
 @Setter
@@ -19,5 +20,5 @@ public class Product {
 
     private Company company;
 
-    private Set<Category> categories;
+    private List<Category> categories;
 }

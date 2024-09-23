@@ -4,10 +4,15 @@ import com.litethinking.domain.Product;
 import com.litethinking.infrastructure.adapters.out.database.entities.ProductEntity;
 import org.mapstruct.Mapper;
 
+import java.util.List;
+
 @Mapper(componentModel = "spring")
-public interface ProductMapper {
+public interface ProductOutMapper {
 
-    Product toDomain (ProductEntity productEntity);
+    Product toDomain(ProductEntity productEntity);
 
-    ProductEntity toEntity (Product product);
+    List<Product> toDomains(List<ProductEntity> productEntities);
+
+    ProductEntity toEntity(Product product);
 }
+
