@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Tag(name = "Módulo de Órdenes", description = "Servicios relacionados con la gestión de órdenes.")
+@Tag(name = "Órdenes", description = "Servicios relacionados con la gestión de órdenes.")
 public interface OrderAPI {
 
     @Operation(summary = "Crear una nueva orden", description = "Registra una nueva orden.")

@@ -10,8 +10,6 @@ public interface ProductMapper {
 
     Product toDomain(ProductRequest productRequest);
 
-    ProductRequest toRequest(Product product);
-
     ProductResponse toResponse(Product product);
 }
 

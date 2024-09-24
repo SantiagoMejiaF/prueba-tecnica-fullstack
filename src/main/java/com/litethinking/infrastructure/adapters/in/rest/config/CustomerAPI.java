@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Tag(name = "Módulo de Clientes", description = "Servicios relacionados con la gestión de clientes.")
+@Tag(name = "Clientes", description = "Servicios relacionados con la gestión de clientes.")
 public interface CustomerAPI {
 
     @Operation(summary = "Crear un nuevo cliente", description = "Registra un nuevo cliente en la base de datos.")

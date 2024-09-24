@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Tag(name = "Módulo de Empresas", description = "Servicios relacionados con la gestión de empresas.")
+@Tag(name = "Empresas", description = "Servicios relacionados con la gestión de empresas.")
 public interface CompanyAPI {
 
     @Operation(summary = "Crear una nueva empresa", description = "Registra una nueva empresa en la base de datos.")

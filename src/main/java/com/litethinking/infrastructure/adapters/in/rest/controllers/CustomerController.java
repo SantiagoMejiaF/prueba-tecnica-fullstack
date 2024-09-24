@@ -1,6 +1,7 @@
 package com.litethinking.infrastructure.adapters.in.rest.controllers;
 
 import com.litethinking.domain.Customer;
+import com.litethinking.infrastructure.adapters.in.rest.config.CustomerAPI;
 import com.litethinking.infrastructure.adapters.in.rest.controllers.mappers.CustomerMapper;
 import com.litethinking.infrastructure.adapters.in.rest.controllers.requests.CustomerRequest;
 import com.litethinking.infrastructure.adapters.in.rest.controllers.responses.CustomerResponse;
@@ -16,7 +17,7 @@ import java.util.Optional;
 @AllArgsConstructor
 @RestController
 @RequestMapping("${request-mapping.controller.customer}")
-public class CustomerController {
+public class CustomerController implements CustomerAPI {
 
     private final CustomerUseCase customerUseCase;
     private final CustomerMapper customerMapper;

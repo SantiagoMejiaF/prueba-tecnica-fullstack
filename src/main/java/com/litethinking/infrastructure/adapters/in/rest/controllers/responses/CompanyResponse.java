@@ -8,7 +8,6 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class CompanyResponse {
 
     private String nit;

@@ -21,5 +21,9 @@ public class CategoryAdapter implements CategoryPort {
 
         return categoryOutMapper.toDomains(categoryRepository.findAllById(ids));
     }
-}
 
+    @Override
+    public List<Category> findAll() {
+        return categoryOutMapper.toDomains(categoryRepository.findAll());
+    }
+}

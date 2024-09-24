@@ -43,6 +43,7 @@ request-mapping:
     product: products
     order: orders
     customer: customers
+    category: categories
 
 
 log4j:

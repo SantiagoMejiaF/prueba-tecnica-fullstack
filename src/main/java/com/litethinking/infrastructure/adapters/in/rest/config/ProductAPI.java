@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Tag(name = "Módulo de Productos", description = "Servicios relacionados con la gestión de productos.")
+@Tag(name = "Productos", description = "Servicios relacionados con la gestión de productos.")
 public interface ProductAPI {
 
     @Operation(summary = "Crear un nuevo producto", description = "Registra un nuevo producto asociado a una empresa en la base de datos.")
@@ -54,4 +54,3 @@ public interface ProductAPI {
     @GetMapping("/list")
     ResponseEntity<List<ProductResponse>> listProducts();
 }
-
