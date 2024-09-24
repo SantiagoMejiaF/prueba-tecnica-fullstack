@@ -1,0 +1,63 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .table-container {
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead {
+    background-color: #f5f5f5;
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+  }
+  
+  tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .MuiTextField-root {
+    margin-bottom: 20px;
+  }
+
+  .MuiIconButton-root {
+    color: #3f51b5;
+  }
+  
+  .MuiButton-containedPrimary {
+    background-color: #3f51b5;
+    color: #fff;
+    margin-right: 10px;
+  }
+  
+  .MuiButton-containedSecondary {
+    background-color: #f50057;
+    color: #fff;
+  }
+  
+  .MuiDialogTitle-root {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .MuiDialogContent-root {
+    padding: 20px;
+  }
+  
+  .MuiTablePagination-root {
+    padding: 10px;
+  }
+  
